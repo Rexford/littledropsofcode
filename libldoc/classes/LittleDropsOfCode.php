@@ -50,6 +50,16 @@ class LittleDropsOfCode {
 	}
     }
 
+    public function prepage() {
+	$page = $this->page;
+
+	if (isset($this->errorPage)) {
+	    return;
+	} elseif (file_exists(LIBLDOC_PATH . "/prepage/$page.php")) {
+	    require(LIBLDOC_PATH . "/prepage/$page.php");
+	}
+    }
+
     public function page($page) {
 	if (isset($this->errorPage)) {
 	    require(LIBLDOC_PATH . "/error/" . $this->errorPage . ".php");

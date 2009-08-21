@@ -7,4 +7,5 @@ Database::instance();
 
 $ldoc = LittleDropsOfCode::instance();
 $ldoc->action();
+$ldoc->prepage();
 ?>
