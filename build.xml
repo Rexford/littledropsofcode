@@ -115,6 +115,11 @@
     <copy file="${src.jquery}/${pkg.jquery.json}" todir="${archive.dir}/ext" />
   </target>
 
+  <target name="undeploy">
+    <delete dir="${dest.www}" />
+    <delete dir="${dest.lib}" />
+  </target>
+
   <target name="clean">
     <delete dir="${archive.dir}" />
     <delete file="${archive.tar}" />
